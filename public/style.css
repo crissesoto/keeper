@@ -7,21 +7,28 @@
     font-family: "Montserrat", sans-serif;
   }
   body {
-    background: #eee;
+    background: #ffffff;
     padding: 0 20px;
   }
   
   header {
-    background-color: #f5ba13;
+    background-color: #ab6356;
     margin: auto -20px;
     padding: 20px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
   
   header h1 {
-    color: #fff;
+    color: #E9EBEB
+    ;
     font-family: "McLaren", cursive;
     font-weight: 200;
+  }
+  
+  header h1 span{
+    color: #9F98A2;
+    font-family: "McLaren", cursive;
+    font-weight: bold;
   }
   
   footer {
