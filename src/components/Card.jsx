@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Note({title, content}) {
+function Card({title, content}) {
   return (
     <div className="note">
       <h1 className="node-title">{title}</h1>
@@ -9,5 +9,5 @@ function Note({title, content}) {
   );
 }
 
-export default Note;
+export default Card;
 

@@ -1,15 +1,18 @@
 import React from 'react';
 import Header from './Header.jsx';
+import Card from './Card.jsx';
 import Footer from './Footer.jsx';
-import Note from './Note.jsx';
 
-function App() {
+function App({notes}) {
+  console.log(notes)
   return (
     <div>
       <Header/>
-      <Note title="First Note" content="Make undereyes cream today"/>
-      <Note title="Advanced CSS" content="Course by Frontend masters"/>
-      <Note title="PHP" content="Subscription on Synfony website/ Githup Student Pack"/>
+      {
+        notes.map(note =>{
+          return <Card key={note.key} title={note.title} content={note.content} />
+        })
+      }
       <Footer/>
     </div>
   );
