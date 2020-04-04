@@ -1,8 +1,17 @@
 import React, { useState } from "react";
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import brown from '@material-ui/core/colors/brown';
+import Zoom from '@material-ui/core/Zoom';
+
+//addIcon color
+const primary = brown[500]; // #795548
+
 
 function CreateArea({ addNote }) {
   // set state
   const [note, setNote] = useState({ title: "", content: "" });
+  const [uiStyleShow, setUiStyleShow] = useState(false);
 
   // track the input value
   function inputOnchange(e) {
@@ -22,23 +31,37 @@ function CreateArea({ addNote }) {
     event.preventDefault();
   }
 
+  function handleUi () {
+    console.log("fucused")
+    setUiStyleShow(true)
+  }
+
+
   return (
     <div>
-      <form id="form">
+      <form className="create-note">
+      { uiStyleShow && 
         <input
           onChange={inputOnchange}
           name="title"
           placeholder="Title"
           value={note.title}
         />
+      }
         <textarea
           onChange={inputOnchange}
           name="content"
           placeholder="Take a note..."
-          rows="3"
+          rows= {uiStyleShow ? "3" : "1"}
           value={note.content}
+          onFocus={handleUi}
+
         />
-        <button onClick={handleClick}>+</button>
+        <Zoom in={uiStyleShow}>
+            <Fab onClick={handleClick} color={primary} aria-label="add">
+                <AddIcon />
+            </Fab>
+        </Zoom>
       </form>
     </div>
   );
