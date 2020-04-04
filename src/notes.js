@@ -22,6 +22,12 @@ const notes = [
       title: "Hardware vs. Software",
       content:
         "What's the difference between hardware and software? You can hit your hardware with a hammer, but you can only curse at your software."
+    },
+    {
+      key: 5,
+      title: "Advanced CSS",
+      content:
+        "We’re entering the deepest realms of CSS3 now — aspects that are often more specific than the CSS Intermediate Tutorial but, y’know, really biscuity cool."
     }
   ];
   
